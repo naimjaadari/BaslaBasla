@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasnim | Potato</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      iframe {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <iframe src="Login.html" frameborder="0" name="frame" id="frame"></iframe>
+  </body>
+  <script>
+    window.addEventListener("message", function (event) {
+      if (event.data === "changeFrame") {
+        document.getElementById("frame").src = "mainpage.html";
+      }
+    });
+  </script>
+</html>
